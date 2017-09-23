@@ -6,6 +6,6 @@
 import {
   AppRegistry,
 } from 'react-native';
-import setup from './js/setup'
+import setup from './js/page/setup'
 
 AppRegistry.registerComponent('RNDemo', () => setup);
