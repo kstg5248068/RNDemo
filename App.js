@@ -8,8 +8,33 @@ import {
     AppRegistry,
     Button
 } from 'react-native';
-import {StackNavigator} from 'react-navigation';
-
+import {StackNavigator,TabNavigator} from 'react-navigation';
+class RecentChatScreen extends Component{
+    render(){
+        const {navigate} = this.props.navigation;
+        return <View>
+        <Text>List of recent chats</Text>
+        <Button
+        onPress={() => navigate('Chat', {user: 'Lucy'})}
+        title='Chat with Lucy'/>
+            </View>
+    }
+}
+class AllContactsScreen extends Component{
+    render(){
+        const {navigate} = this.props.navigation;
+        return <View>
+        <Text>List of all contacts</Text>
+        <Button
+        onPress={() => navigate('Chat', {user: 'Lucy'})}
+        title='Chat with Lucy'/>
+            </View>
+    }
+}
+const MainScreenNavigator=TabNavigator({
+    Recent:{screen:RecentChatScreen},
+    All:{screen:AllContactsScreen}
+})
 class HomeScreen extends Component {
     static navigationOptions = {
         title: 'Welcome',
@@ -40,9 +65,11 @@ class ChatScreen extends Component {
         return <Text>Chat with {params.user}.</Text>
     }
 }
-
-export const RNDemo = StackNavigator({
-    Home: {screen: HomeScreen},
+const RNDemo = StackNavigator({
+    Home: {screen: MainScreenNavigator,
+    navigationOptions:{
+        title:'My Chats'
+    }},
     Chat: {screen: ChatScreen}
 });
 AppRegistry.registerComponent('RNDemo', () => RNDemo);
