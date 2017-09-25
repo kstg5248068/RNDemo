@@ -12,13 +12,21 @@ import  RecentChatScreen from './RecentChatScreen';
 import AllContactsScreen from './AllContactsScreen';
 
 const MainScreenNavigator = TabNavigator({
-    Recent: {screen: RecentChatScreen},
+    Recent: {screen: RecentChatScreen,
+    navigationOptions:{
+        tabBarLabel:'recent'
+    }},
     All: {screen: AllContactsScreen}
+},{
+    tabBarPosition:'top',
+
 });
 export default class NavigatorWrappingScreen extends Component {
+    // static navigationOptions={
+    //     headerTitle:'导航栏的使用'
+    // }
     render() {
         return <View style={{flex: 1}}>
-            <Test/>
             <MainScreenNavigator navigation={this.props.navigation}/>
         </View>
     }
