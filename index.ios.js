@@ -9,4 +9,4 @@
 // } from 'react-native';
 // import setup from './js/page/setup'
 // AppRegistry.registerComponent('RNDemo', () => setup);
-import './App';
+import './js/test/react-navigation/App';
