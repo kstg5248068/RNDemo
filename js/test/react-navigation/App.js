@@ -43,7 +43,7 @@ const RNDemo = StackNavigator({
                 // gesturesEnabled：是否支持滑动返回收拾，iOS默认支持，安卓默认关闭
                 gesturesEnabled: false
             }
-        },
+         },
         Chat: {
             screen: ChatScreen
         }
@@ -51,9 +51,9 @@ const RNDemo = StackNavigator({
     //导航视觉效果
     {
         // mode：定义跳转风格。card：使用iOS和安卓默认的风格。modal：iOS独有的使屏幕从底部画出。类似iOS的present效果
-        mode: 'modal',
+      //  mode: 'modal',
         //headerMode：边缘滑动返回上级页面时动画效果。float：iOS默认的效果，可以看到一个明显的过渡动画。screen：滑动过程中，整个页面都会返回。none：没有动画。
-        headerMode: 'none',
+       headerMode: 'float',
         //cardStyle：自定义设置跳转效果。
         // transitionConfig： 自定义设置滑动返回的配置。
         // onTransitionStart：当转换动画即将开始时被调用的功能。
@@ -67,7 +67,8 @@ const RNDemo = StackNavigator({
 
         // initialRouteName：设置默认的页面组件，必须是上面已注册的页面组件。
         //initialRouteParams：初始路由的参数。
-    })
+    }
+    )
 ;
 
 
