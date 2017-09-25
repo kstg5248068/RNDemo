@@ -1,6 +1,10 @@
 # RNDemo
 学习RN的历程
 /**************************************************/
+12.react-navigation {TabNavigator}的导航配置android端
+tabBarIcon存在问题，明天继续
+  2017.09.25 22:37
+/**************************************************/
 11.react-navigation {StackNavigator}的导航配置和视觉效果2
 headerMode 设置成none 导航栏消失
   2017.09.25 17:00
